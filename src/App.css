@@ -860,19 +860,9 @@ body{
 
 .nav-search input{
 
-  width: 400px;
+  width:100%;
 
-  padding: 14px 20px;
-
-  border-radius: 30px;
-
-  border: none;
-
-  outline: none;
-
-  background: #f3f3f3;
-
-  font-size: 16px;
+  max-width:400px;
 
 }
 
@@ -4175,4 +4165,55 @@ table{
   body{
   overflow-x:hidden;
 }
+}
+/* MOBILE SEARCH + LOGIN FIX */
+
+@media(max-width:768px){
+
+  .navbar{
+
+    padding:12px;
+
+    gap:10px;
+
+  }
+
+  .nav-search{
+
+    width:100%;
+
+  }
+
+  .nav-search input{
+
+    width:100%;
+
+    font-size:14px;
+
+    padding:10px 15px;
+
+  }
+
+  .nav-icons{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+  }
+
+  .nav-login-btn{
+
+    padding:8px 14px;
+
+    font-size:14px;
+
+  }
+
 }
