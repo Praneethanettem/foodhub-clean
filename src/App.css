@@ -3967,8 +3967,6 @@ table{
 }
 /* MOBILE FONT FIX */
 
-@media(max-width:768px){
-
   h1{
 
     font-size:28px !important;
@@ -3987,7 +3985,7 @@ table{
 
   }
 
-}
+
 /* CARD FIX */
 
 .card,
@@ -4369,6 +4367,138 @@ table{
     right:15px;
 
     font-size:28px;
+
+  }
+
+}
+/* ADMIN PANEL MOBILE RESPONSIVE FIX */
+
+@media(max-width:768px){
+
+  /* MAIN ADMIN LAYOUT */
+
+  .admin-container,
+  .dashboard-container,
+  .orders-container,
+  .users-container,
+  .addfood-container{
+
+    flex-direction:column;
+
+    width:100%;
+
+    overflow-x:hidden;
+
+  }
+
+  /* SIDEBAR */
+
+  .sidebar{
+
+    width:100%;
+
+    height:auto;
+
+    padding:20px 10px;
+
+  }
+
+  .sidebar ul{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:12px;
+
+  }
+
+  .sidebar li{
+
+    width:45%;
+
+    text-align:center;
+
+    font-size:16px;
+
+  }
+
+  /* DASHBOARD CARDS */
+
+  .stats-container,
+  .dashboard-cards,
+  .orders-stats{
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:20px;
+
+    width:100%;
+
+  }
+
+  .stat-card,
+  .dashboard-card,
+  .order-card{
+
+    width:100%;
+
+    min-width:100%;
+
+  }
+
+  /* TABLE RESPONSIVE */
+
+  table{
+
+    width:100%;
+
+    display:block;
+
+    overflow-x:auto;
+
+    white-space:nowrap;
+
+  }
+
+  th,
+  td{
+
+    font-size:14px;
+
+    padding:10px;
+
+  }
+
+  /* PAGE TITLES */
+
+  h1{
+
+    font-size:36px;
+
+    text-align:center;
+
+  }
+
+  h2{
+
+    font-size:28px;
+
+    text-align:center;
+
+  }
+
+  /* CONTENT AREA */
+
+  .main-content{
+
+    width:100%;
+
+    padding:20px;
 
   }
 
