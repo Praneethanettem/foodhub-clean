@@ -2584,9 +2584,11 @@ body{
 
 .modern-users-table{
 
-  width: 100%;
+  width:100%;
 
-  border-collapse: collapse;
+  min-width:700px;
+
+  border-collapse:collapse;
 
 }
 
@@ -2751,23 +2753,25 @@ body{
 
 .orders-table-box{
 
-  background: white;
+  width:100%;
 
-  padding: 30px;
+  overflow-x:auto;
 
-  border-radius: 25px;
+  background:white;
 
-  margin-top: 30px;
+  border-radius:20px;
 
-  overflow-x: auto;
+  padding:15px;
 
 }
 
 .modern-orders-table{
 
-  width: 100%;
+  width:100%;
 
-  border-collapse: collapse;
+  min-width:700px;
+
+  border-collapse:collapse;
 
 }
 
@@ -4011,7 +4015,7 @@ table{
 }
 /* MOBILE FOOD CARDS */
 
-@media(max-width:768px){
+
 
   .food-grid{
     grid-template-columns:repeat(2,1fr);
@@ -4040,7 +4044,7 @@ table{
     font-size:16px;
   }
 
-}
+
 /* MOBILE NAVBAR */
 
 @media(max-width:768px){
@@ -4499,6 +4503,68 @@ table{
     width:100%;
 
     padding:20px;
+
+  }
+
+}
+/* USERS + ORDERS MOBILE FIX */
+
+@media(max-width:768px){
+
+  .users-container,
+  .orders-container{
+
+    padding:15px;
+
+  }
+
+  .orders-header,
+  .orders-title-section{
+
+    text-align:center;
+
+    align-items:center;
+
+  }
+
+  .orders-heading,
+  .users-heading{
+
+    font-size:30px;
+
+  }
+
+  .orders-subheading,
+  .users-subheading{
+
+    font-size:14px;
+
+  }
+
+  .orders-table-box,
+  .users-table-box{
+
+    overflow-x:auto;
+
+    padding:10px;
+
+  }
+
+  .modern-orders-table,
+  .modern-users-table{
+
+    min-width:650px;
+
+  }
+
+  .modern-orders-table th,
+  .modern-orders-table td,
+  .modern-users-table th,
+  .modern-users-table td{
+
+    padding:10px;
+
+    font-size:14px;
 
   }
 
