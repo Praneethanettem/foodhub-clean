@@ -43,9 +43,7 @@ useEffect(()=>{
 
 });
     
-  setPhone(response.data.phone);
 
-setLocation(response.data.location);
 
   })
 
