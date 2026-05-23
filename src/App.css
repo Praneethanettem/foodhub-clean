@@ -15,15 +15,7 @@
   background:linear-gradient(to right,#ff7e00,#ffb347);
 }
 
-.login-container{
-  width:900px;
-  height:500px;
-  background:white;
-  border-radius:25px;
-  overflow:hidden;
-  display:flex;
-  box-shadow:0px 10px 30px rgba(0,0,0,0.2);
-}
+
 
 .left-side{
 
@@ -553,7 +545,7 @@
 @media(max-width:900px){
 
  .login-container,
-.signup-container,
+
 .login-container{
 
   width: 90%;
@@ -4280,6 +4272,103 @@ table{
     gap:12px;
 
     flex-wrap:wrap;
+
+  }
+
+}
+/* LOGIN & ADMIN MOBILE RESPONSIVE FIX */
+
+@media(max-width:768px){
+
+  .login-container,
+  .signup-container,
+  .admin-container{
+
+    width:95%;
+
+    height:auto;
+
+    flex-direction:column;
+
+    border-radius:20px;
+
+    overflow-y:auto;
+
+  }
+
+  .left-panel,
+  .signup-left,
+  .admin-left{
+
+    width:100%;
+
+    min-height:220px;
+
+    padding:30px 20px;
+
+    text-align:center;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+  }
+
+  .right-panel,
+  .signup-right,
+  .admin-right{
+
+    width:100%;
+
+    padding:30px 20px;
+
+  }
+
+  .right-panel h2,
+  .signup-right h2,
+  .admin-right h2{
+
+    font-size:36px;
+
+    text-align:center;
+
+  }
+
+  .right-panel input,
+  .signup-right input,
+  .admin-right input{
+
+    width:100%;
+
+    font-size:16px;
+
+    padding:14px;
+
+  }
+
+  .right-panel button,
+  .signup-right button,
+  .admin-right button{
+
+    width:100%;
+
+    padding:14px;
+
+    font-size:18px;
+
+  }
+
+  .close-btn{
+
+    top:15px;
+
+    right:15px;
+
+    font-size:28px;
 
   }
 
