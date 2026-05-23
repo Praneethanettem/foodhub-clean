@@ -4093,13 +4093,35 @@ table{
     width:100%;
   }
 
-  .nav-icons{
-    width:100%;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:15px;
-  }
+.nav-icons{
 
+  width:100%;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  flex-wrap:wrap;
+
+  gap:10px;
+
+}
+
+.nav-icons a,
+.nav-login-btn{
+
+  font-size:14px;
+
+  padding:8px 12px;
+
+}
+.navbar{
+
+  overflow:hidden;
+
+}
 }
 @media(max-width:768px){
 
