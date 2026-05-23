@@ -190,7 +190,6 @@ const submitQuery = async () => {
   >
 
     Edit Profile
-
   </button>
   {showEdit && (
     <>
