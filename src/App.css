@@ -118,14 +118,7 @@
   margin-bottom:40px;
   font-size:22px;
 }
-.right-side{
-  flex: 1;
-  background: #f5f5f5;
-  padding: 40px 60px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 
 .right-side input{
   width:100%;
@@ -209,15 +202,10 @@
 /* FOOD GRID */
 
 .food-grid{
-
-  display: grid;
-
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-
-  gap: 35px;
-
-  padding: 50px;
-
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  padding:30px;
 }
 
 
@@ -596,10 +584,7 @@ body{
   .left-side{
   pointer-events: none;
 }
-  .right-side{
-    width:100%;
-    padding:30px;
-  }
+ 
 
   .main-burger{
     font-size:100px;
@@ -814,24 +799,14 @@ body{
   transform:scale(1.02);
   transition:0.3s;
 }
-.navbar{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:18px 45px;
-  background:rgba(255,255,255,0.95);
-  backdrop-filter:blur(10px);
-  position:sticky;
-  top:0;
-  z-index:1000;
-  box-shadow:0 4px 20px rgba(0,0,0,0.08);
-}
 
-.logo{
-  color:#ff7a00;
-  font-size:42px;
-  font-weight:bold;
-}
+.navbar{
+  width:100%;
+  height:auto;
+  flex-wrap:wrap;
+  gap:15px;}
+
+
 
 /* NAVBAR */
 
@@ -1135,15 +1110,6 @@ body{
 }
 /* DASHBOARD */
 
-.dashboard-container{
-
-  min-height: 100vh;
-  background: linear-gradient(to right,#fff5e6,#ffe0b3);
-  padding: 60px 20px;
-  text-align: center;
-
-}
-
 .dashboard-title{
 
   font-size: 60px;
@@ -1276,15 +1242,7 @@ body{
   background: #ff6600;
 
 }
-.users-table{
 
-  width: 80%;
-  margin: auto;
-  border-collapse: collapse;
-  margin-top: 40px;
-  background: white;
-
-}
 
 .users-table th{
 
@@ -1366,15 +1324,7 @@ body{
 }
 /* ORDERS PAGE */
 
-.orders-page{
 
-  min-height: 100vh;
-
-  background: linear-gradient(to right,#fff5e6,#ffe0b3);
-
-  padding: 50px;
-
-}
 
 .orders-page h1{
 
@@ -2007,30 +1957,11 @@ body{
 }
 /* DASHBOARD */
 
-.dashboard-page{
-
-  display: flex;
-
-  min-height: 100vh;
-
-  background: #f5f5f5;
-
-}
+.dashboard-page
 
 
 /* SIDEBAR */
 
-.sidebar{
-
-  width: 260px;
-
-  background: #111;
-
-  color: white;
-
-  padding: 40px 25px;
-
-}
 
 .sidebar h1{
 
@@ -2122,19 +2053,7 @@ body{
 
 }
 
-.stat-card{
 
-  background: white;
-
-  padding: 35px;
-
-  border-radius: 25px;
-
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-
-  transition: 0.3s;
-
-}
 
 .stat-card:hover{
 
@@ -2163,17 +2082,6 @@ body{
 
 /* ACTIONS */
 
-.quick-actions{
-
-  margin-top: 40px;
-
-  display: flex;
-
-  gap: 20px;
-
-  flex-wrap: wrap;
-
-}
 
 .action-btn{
 
@@ -2202,19 +2110,6 @@ body{
 
 /* RECENT ORDERS */
 
-.recent-orders{
-
-  margin-top: 50px;
-
-  background: white;
-
-  padding: 30px;
-
-  border-radius: 25px;
-
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-
-}
 
 .recent-orders h2{
 
@@ -3197,19 +3092,6 @@ body{
 
 /* HELP SECTION */
 
-.help-section{
-
-  width:100%;
-
-  background:white;
-
-  padding:30px;
-
-  border-radius:20px;
-
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
-
-}
 
 .help-section h2{
 
@@ -4160,4 +4042,115 @@ table{
 
   max-width:100%;
 
+}
+/* MOBILE FOOD CARDS */
+
+@media(max-width:768px){
+
+  .food-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    padding:15px;
+  }
+
+  .food-card{
+    border-radius:18px;
+  }
+
+  .food-card img{
+    height:140px;
+  }
+
+  .food-info h2{
+    font-size:20px;
+  }
+
+  .price{
+    font-size:18px;
+  }
+
+  .add-btn{
+    padding:10px;
+    font-size:16px;
+  }
+
+}
+/* MOBILE NAVBAR */
+
+@media(max-width:768px){
+
+  .navbar{
+    padding:15px;
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .nav-search{
+    width:100%;
+  }
+
+  .nav-search input{
+    width:100%;
+  }
+
+  .nav-icons{
+    width:100%;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:15px;
+  }
+
+}
+@media(max-width:768px){
+
+  .footer{
+    grid-template-columns:1fr;
+    text-align:center;
+    padding:35px 20px;
+  }
+
+  .footer-left p{
+    max-width:100%;
+  }
+
+}
+@media(max-width:768px){
+
+  .hero-section{
+    flex-direction:column;
+    padding:25px 15px;
+    text-align:center;
+  }
+
+  .hero-left,
+  .hero-right{
+    width:100%;
+  }
+
+  .hero-left h1{
+    font-size:34px !important;
+  }
+
+  .hero-left p{
+    font-size:16px !important;
+  }
+
+}
+@media(max-width:768px){
+
+  .profile-container{
+    grid-template-columns:1fr;
+    padding:15px;
+  }
+
+  .profile-card,
+  .wallet-card,
+  .orders-history,
+  .help-section{
+    padding:20px;
+  }
+
+  body{
+  overflow-x:hidden;
+}
 }
