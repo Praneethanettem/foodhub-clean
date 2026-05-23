@@ -4,15 +4,12 @@ import { useEffect, useState } from "react";
 function Profile() {
 const [user,setUser] = useState({});
 const [orders,setOrders] = useState([]);
-const [editMode,setEditMode] = useState(false);
 const [editName,setEditName] = useState("");
 const [editEmail,setEditEmail] = useState("");
 const [showEdit,setShowEdit] = useState(false);
 const [contactName, setContactName] = useState("");
 const [contactEmail, setContactEmail] = useState("");
 const [contactMessage, setContactMessage] = useState("");
-const [phone,setPhone] = useState("");
-const [location,setLocation] = useState("");
 
 useEffect(()=>{
 
