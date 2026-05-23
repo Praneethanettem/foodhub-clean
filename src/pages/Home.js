@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Cart from "./Cart";
-import FoodCard from "../components/FoodCard";
 import Navbar from "../components/Navbar";
 import axios from "axios";
 import AuthModal from "../components/AuthModal";
