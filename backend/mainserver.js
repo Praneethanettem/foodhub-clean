@@ -18,37 +18,23 @@ app.use(express.urlencoded({ extended: true }));
 
 // MYSQL CONNECTION
 
+const mysql = require("mysql2");
+
 const db = mysql.createConnection({
-
-  host: "localhost",
-
-  user: "root",
-
-  password: "Dellpass@123",
-
-  database: "foodhub"
-
+  host: process.env.MYSQLHOST,
+  user: process.env.MYSQLUSER,
+  password: process.env.MYSQLPASSWORD,
+  database: process.env.MYSQLDATABASE,
+  port: process.env.MYSQLPORT
 });
-
-
-// CONNECT MYSQL
 
 db.connect((err) => {
-
-  if(err){
-
-    console.log("MySQL Connection Error:", err);
-
-  }
-
-  else{
-
+  if (err) {
+    console.log(err);
+  } else {
     console.log("MySQL Connected ✅");
-
   }
-
 });
-
 
 // TEST ROUTE
 
