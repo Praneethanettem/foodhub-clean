@@ -67,6 +67,7 @@ const saveProfile = async () => {
         name: editName,
         email: editEmail
       }
+      
 
     );
 
@@ -230,6 +231,7 @@ const submitQuery = async () => {
             💰 Wallet Balance
           </h2>
           <h1>{user.wallet}</h1>
+          <h3>₹600</h3>
 
         </div>
         {/* LOGOUT */}  
