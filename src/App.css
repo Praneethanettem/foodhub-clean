@@ -1304,80 +1304,7 @@ body{
   background: #fff3e0;
 
 }
-/* ORDERS PAGE */
 
-
-
-.orders-page h1{
-
-  text-align: center;
-
-  font-size: 55px;
-
-  color: #ff8800;
-
-  margin-bottom: 50px;
-
-}
-
-.orders-container{
-
-  display: flex;
-
-  justify-content: center;
-
-  gap: 30px;
-
-  flex-wrap: wrap;
-
-}
-
-.order-card{
-
-  width: 320px;
-
-  background: white;
-
-  padding: 30px;
-
-  border-radius: 25px;
-
-  text-align: center;
-
-  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-
-  transition: 0.3s;
-
-}
-
-.order-card:hover{
-
-  transform: translateY(-10px);
-
-}
-
-.order-card h2{
-
-  color: #ff8800;
-
-  font-size: 30px;
-
-}
-
-.order-card p{
-
-  font-size: 22px;
-
-  margin: 20px 0;
-
-}
-
-.order-card h3{
-
-  color: green;
-
-  font-size: 28px;
-}
 
 /* HERO SECTION */
 
@@ -4645,6 +4572,96 @@ table{
   }
 
 }
+.orders-container{
+
+    padding:20px 12px !important;
+
+    overflow-x:hidden;
+
+}
+
+.orders-title{
+
+    font-size:38px !important;
+
+    text-align:center;
+
+    margin-top:20px;
+
+}
+
+.orders-subtitle{
+
+    text-align:center;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+}
+
+/* 2 x 2 MOBILE CARDS */
+
+.orders-stats{
+
+    display:grid !important;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+
+    width:100%;
+
+    margin-top:20px;
+
+}
+
+.order-card{
+
+    width:100% !important;
+
+    min-width:0 !important;
+
+    padding:18px 10px !important;
+
+    box-sizing:border-box;
+
+    border-radius:20px;
+
+    text-align:center;
+
+}
+
+/* TABLE */
+
+.orders-table-container{
+
+    width:100%;
+
+    overflow-x:auto;
+
+    margin-top:25px;
+
+    border-radius:20px;
+
+}
+
+.orders-table{
+
+    min-width:700px;
+
+    font-size:14px;
+
+}
+
+.orders-table th,
+.orders-table td{
+
+    padding:10px 12px !important;
+
+    text-align:center;
+
+}
 /* FINAL CARD ALIGNMENT FIX */
 
 .food-card{
@@ -4675,7 +4692,7 @@ table{
 
 }
 @media (max-width:768px){
-
+}
 /* ===== USERS PAGE ===== */
 
 .users-container{
@@ -4712,90 +4729,3 @@ table{
 }
 
 /* ===== ORDERS PAGE ===== */
-
-.orders-container{
-
-    padding:20px 10px !important;
-
-}
-
-.orders-stats{
-
-    display:grid !important;
-
-    grid-template-columns:repeat(2,1fr);
-
-    gap:15px;
-
-    margin-top:30px;
-
-}
-
-.order-card{
-
-    width:100% !important;
-
-    min-width:unset !important;
-
-    padding:20px 10px !important;
-
-}
-
-.orders-table-container{
-
-    width:100% !important;
-
-    overflow-x:auto;
-
-    border-radius:20px;
-
-    margin-top:25px;
-
-}
-
-.orders-table{
-
-    min-width:700px;
-
-    font-size:14px;
-
-}
-
-.orders-table th,
-.orders-table td{
-
-    padding:10px 12px !important;
-
-    text-align:center;
-
-}
-
-/* ===== PAGE HEADINGS ===== */
-
-.orders-title,
-.users-title{
-
-    font-size:38px !important;
-
-    text-align:center;
-
-}
-
-.orders-subtitle,
-.users-subtitle{
-
-    text-align:center;
-
-    font-size:18px;
-
-}
-
-/* ===== REMOVE EXTRA SIDE SPACE ===== */
-
-body{
-
-    overflow-x:hidden;
-
-}
-
-}
