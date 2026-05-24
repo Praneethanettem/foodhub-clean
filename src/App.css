@@ -4330,15 +4330,17 @@ table{
 
   .stats-container,
   .dashboard-cards,
- .orders-stats{
+.orders-stats{
 
     display:grid !important;
 
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:repeat(2, 1fr);
 
-    gap:12px;
+    gap:15px;
 
     width:100%;
+
+    margin-top:25px;
 
 }
 
@@ -4348,7 +4350,7 @@ table{
 
     min-width:0 !important;
 
-    padding:18px 10px !important;
+    padding:20px 10px !important;
 
     box-sizing:border-box;
 
@@ -4666,7 +4668,6 @@ table{
 
 .food-card{
 
-  display:flex;
 
   flex-direction:column;
 
@@ -4694,7 +4695,21 @@ table{
 @media (max-width:768px){
 }
 /* ===== USERS PAGE ===== */
+.users-table-container{
 
+    width:100% !important;
+
+    overflow-x:auto;
+
+    padding:0 !important;
+
+}
+
+.users-table{
+
+    min-width:400px !important;
+
+}
 .users-container{
 
     padding:20px 10px !important;
