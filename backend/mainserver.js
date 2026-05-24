@@ -17,7 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 
 // MYSQL CONNECTION
-
+require("dotenv").config();
 const mysql = require("mysql2");
 
 const db = mysql.createConnection({
