@@ -4332,15 +4332,13 @@ table{
   .dashboard-cards,
 .orders-stats{
 
-    display:grid !important;
+    display:grid;
 
-    grid-template-columns:repeat(2, 1fr);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
 
-    gap:15px;
+    gap:20px;
 
     width:100%;
-
-    margin-top:25px;
 
 }
 
@@ -4426,6 +4424,12 @@ table{
 /* USERS + ORDERS MOBILE FIX */
 
 @media(max-width:768px){
+.orders-stats{
+
+    grid-template-columns:1fr 1fr !important;
+
+}
+
 
   .users-container,
   .orders-container{
@@ -4676,7 +4680,6 @@ table{
   min-height:300px;
 
 }
-
 .food-info{
 
   flex:1;
