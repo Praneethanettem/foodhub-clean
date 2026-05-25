@@ -1,15 +1,11 @@
+
 const express = require("express");
-
 const cors = require("cors");
-
-
 const bcrypt = require("bcrypt");
 const app = express();
 
-
-// MIDDLEWARE
-
 app.use(cors());
+// MIDDLEWARE
 
 app.use(express.json());
 
@@ -25,7 +21,7 @@ const db = mysql.createConnection({
   user: process.env.MYSQLUSER,
   password: process.env.MYSQLPASSWORD,
   database: process.env.MYSQLDATABASE,
-  port: Number(process.env.MYSQLPORT)
+  port: process.env.MYSQLPORT
 });
 
 db.connect((err) => {
@@ -45,6 +41,8 @@ app.get("/", (req,res)=>{
 });
 
 
+// ================= SIGNUP API =================
+// ================= SIGNUP API =================
 // ================= SIGNUP API =================
 // ================= SIGNUP API =================
 app.post("/signup", (req,res)=>{
@@ -99,7 +97,7 @@ app.post("/signup", (req,res)=>{
 
                 insertSql,
 
-                [name,email,hashedPassword],
+                [name,email,password],
 
                 (insertErr,insertResult)=>{
 
@@ -135,19 +133,18 @@ app.post("/signup", (req,res)=>{
 
 });
 // ================= LOGIN API =================
-// ================= LOGIN API =================
 app.post("/login", (req,res)=>{
 
   const { email, password } = req.body;
 
   const sql =
-  "SELECT * FROM users WHERE email=?";
+  "SELECT * FROM users WHERE email=? AND password=?";
 
   db.query(
 
     sql,
 
-    [email],
+    [email,password],
 
     (err,result)=>{
 
@@ -155,62 +152,19 @@ app.post("/login", (req,res)=>{
 
         console.log(err);
 
-        res.send("Login Failed");
+        return res.send("Login Failed");
+
+      }
+
+      if(result.length > 0){
+
+        return res.send("Login Successful");
 
       }
 
       else{
 
-        if(result.length > 0){
-
-          const storedPassword =
-          result[0].password;
-
-          // OLD NORMAL PASSWORD USERS
-
-          if(storedPassword === password){
-
-            res.send("Login Successful");
-
-          }
-
-          // NEW HASHED PASSWORD USERS
-
-          else{
-
-            bcrypt.compare(
-
-              password,
-
-              storedPassword,
-
-              (compareErr,compareResult)=>{
-
-                if(compareResult){
-
-                  res.send("Login Successful");
-
-                }
-
-                else{
-
-                  res.send("Invalid Credentials");
-
-                }
-
-              }
-
-            );
-
-          }
-
-        }
-
-        else{
-
-          res.send("Invalid Credentials");
-
-        }
+        return res.send("Invalid Credentials");
 
       }
 
@@ -243,7 +197,6 @@ app.get("/users", (req,res)=>{
       else{
 
         res.send(result);
-
       }
 
     }
@@ -490,40 +443,6 @@ app.get("/userorders/:email",(req,res)=>{
 
 // CONTACT API
 
-app.post("/contact", (req,res)=>{
-
-  const { name, email, message } = req.body;
-
-  const sql =
-  "INSERT INTO contact(name,email,message) VALUES(?,?,?)";
-
-  db.query(
-
-    sql,
-
-    [name,email,message],
-
-    (err,result)=>{
-
-      if(err){
-
-        console.log(err);
-
-        res.send("Query Failed");
-
-      }
-
-      else{
-
-        res.send("Query Submitted Successfully");
-
-      }
-
-    }
-
-  );
-
-});
 // CONTACT API
 
 app.post("/contact", (req,res)=>{

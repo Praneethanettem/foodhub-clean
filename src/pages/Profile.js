@@ -25,9 +25,10 @@ useEffect(()=>{
   .then((response)=>{
 
     setUser(response.data);
-    axios.get(
+   
+axios.get(
 
-  `http://localhost:7000/userorders/${email}`
+  `http://127.0.0.1:7000/userorders/${email}`
 
 )
 
@@ -42,8 +43,6 @@ useEffect(()=>{
   console.log(error);
 
 });
-    
-
 
   })
 
@@ -102,7 +101,7 @@ const submitQuery = async () => {
 
     const response = await axios.post(
 
-      "http://localhost:7000/contact",
+      "http://127.0.0.1:7000/contact",
 
       {
 
@@ -289,7 +288,7 @@ const submitQuery = async () => {
         <p>{order.amount}</p>
 
         <small>
-          Ordered on: 22 May 2026 • 9:40 PM
+          Ordered on: 27 May 2026 • 9:40 PM
         </small>
 
         <div className="rating-stars">

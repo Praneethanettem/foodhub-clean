@@ -29,7 +29,7 @@ function AuthModal({ closeModal }) {
 
       const response = await axios.post(
 
-        "http://localhost:7000/login",
+        "http://127.0.0.1:7000/login",
 
         {
 
@@ -79,7 +79,7 @@ function AuthModal({ closeModal }) {
 
       const response = await axios.post(
 
-        "http://localhost:7000/signup",
+        "http://127.0.0.1:7000/signup",
 
         {
 

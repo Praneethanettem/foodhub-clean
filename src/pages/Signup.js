@@ -21,7 +21,7 @@ function Signup() {
 
       const response = await axios.post(
 
-        "http://127.0.0.1:7000/signup",
+        "hhttp://127.0.0.1:7000/signup",
 
         {
 

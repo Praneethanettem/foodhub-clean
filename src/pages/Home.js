@@ -243,7 +243,7 @@ const fetchFoods = async () => {
 
     const response = await axios.get(
 
-      "http://localhost:7000/foods"
+      "http://127.0.0.1:7000/foods"
 
     );
 

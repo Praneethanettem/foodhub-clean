@@ -18,7 +18,7 @@ function Login() {
 
       const response = await axios.post(
 
-        "http://localhost:7000/login",
+        "http://127.0.0.1:7000/login",
 
         {
 
@@ -29,6 +29,8 @@ function Login() {
         }
 
       );
+
+      console.log(response.data);
 
       if(response.data === "Login Successful"){
 
@@ -81,11 +83,16 @@ function Login() {
           background:"white",
           padding:"40px",
           borderRadius:"15px",
-          width:"350px"
+          width:"350px",
+          boxShadow:"0px 0px 10px rgba(0,0,0,0.2)"
         }}
       >
 
-        <h1>
+        <h1
+          style={{
+            textAlign:"center"
+          }}
+        >
 
           Login
 
@@ -99,7 +106,9 @@ function Login() {
           style={{
             width:"100%",
             padding:"12px",
-            marginTop:"20px"
+            marginTop:"20px",
+            borderRadius:"8px",
+            border:"1px solid gray"
           }}
         />
 
@@ -111,7 +120,9 @@ function Login() {
           style={{
             width:"100%",
             padding:"12px",
-            marginTop:"20px"
+            marginTop:"20px",
+            borderRadius:"8px",
+            border:"1px solid gray"
           }}
         />
 
@@ -123,7 +134,10 @@ function Login() {
             marginTop:"20px",
             background:"orange",
             color:"white",
-            border:"none"
+            border:"none",
+            borderRadius:"8px",
+            cursor:"pointer",
+            fontSize:"16px"
           }}
         >
 

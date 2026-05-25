@@ -5,6 +5,7 @@ function Cart({ cart = [], setShowCart }) {
 
   const [success, setSuccess] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
+  const [paymentMethod, setPaymentMethod] = useState("Cash On Delivery");
 
   // TOTAL PRICE
 
@@ -70,7 +71,7 @@ const placeOrder = async () => {
 
         amount: `₹${totalAmount}`,
 
-        payment: "Cash On Delivery",
+        payment: paymentMethod,
 
         status: "Preparing"
 
@@ -253,30 +254,56 @@ const placeOrder = async () => {
 
             <div className="payment-methods">
 
-              <label>
-                <input type="radio" name="payment" />
-                UPI
-              </label>
+             <label>
+  <input
+    type="radio"
+    name="payment"
+    value="UPI"
+    onChange={(e)=>setPaymentMethod(e.target.value)}
+  />
+  UPI
+</label>
 
-              <label>
-                <input type="radio" name="payment" />
-                Cash On Delivery
-              </label>
+<label>
+  <input
+    type="radio"
+    name="payment"
+    value="Cash On Delivery"
+    defaultChecked
+    onChange={(e)=>setPaymentMethod(e.target.value)}
+  />
+  Cash On Delivery
+</label>
 
-              <label>
-                <input type="radio" name="payment" />
-                Debit / Credit Card
-              </label>
+<label>
+  <input
+    type="radio"
+    name="payment"
+    value="Debit / Credit Card"
+    onChange={(e)=>setPaymentMethod(e.target.value)}
+  />
+  Debit / Credit Card
+</label>
 
-              <label>
-                <input type="radio" name="payment" />
-                PhonePe
-              </label>
+<label>
+  <input
+    type="radio"
+    name="payment"
+    value="PhonePe"
+    onChange={(e)=>setPaymentMethod(e.target.value)}
+  />
+  PhonePe
+</label>
 
-              <label>
-                <input type="radio" name="payment" />
-                Google Pay
-              </label>
+<label>
+  <input
+    type="radio"
+    name="payment"
+    value="Google Pay"
+    onChange={(e)=>setPaymentMethod(e.target.value)}
+  />
+  Google Pay
+</label>
 
             </div>
 

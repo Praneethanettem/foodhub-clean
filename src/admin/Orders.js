@@ -65,7 +65,7 @@ useEffect(() => {
 
       const response = await axios.get(
 
-        "http://localhost:7000/orders"
+        "http://127.0.0.1:7000/orders"
 
       );
 
@@ -80,8 +80,6 @@ useEffect(() => {
     }
 
   };
-
-
   return (
 
     <div className="orders-container">
